@@ -34,6 +34,7 @@ section {
   border-left-color: hsl(51, 83%, 95%);
   border-right-color: hsl(50, 61%, 92%, 0.5);
   border-bottom-color: hsl(50, 61%, 92%, 0.5);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 .header {
   position: relative;
@@ -72,6 +73,7 @@ section {
   border-left-color: white;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   border-right-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.85);
 }
 .header-right .btn:nth-child(2) {
   font-size: 1rem;
