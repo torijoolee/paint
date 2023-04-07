@@ -14,6 +14,11 @@ canvas {
   overflow-x: hidden;
   min-height: 62vh;
   background-color: #fff;
+  border: 4px inset;
+  border-left-color: hsl(50, 61%, 92%, 0.5);
+  border-top-color: hsl(50, 61%, 92%, 0.5);
+  border-right-color: hsl(50, 61%, 92%, 0.6);
+  border-bottom-color: hsl(50, 61%, 92%, 0.6);
 }
 section {
   display: flex;
@@ -24,6 +29,11 @@ section {
   min-height: 83vh;
   border-radius: 2px;
   background: #ece9d8;
+  border: 4px outset;
+  border-top: 4px inset rgba(144, 238, 255, 0.15);
+  border-left-color: hsl(51, 83%, 95%);
+  border-right-color: hsl(50, 61%, 92%, 0.5);
+  border-bottom-color: hsl(50, 61%, 92%, 0.5);
 }
 .header {
   position: relative;
@@ -37,22 +47,31 @@ section {
   background-color: #0054e4;
   align-items: center;
   color: white;
-  height: 25px;
+  height: 26px;
   padding-left: 1rem;
   border-radius: 2px 2px 0 0;
+  border-bottom: groove;
 }
 .header-left span {
   position: absolute;
   top: 6.5px;
 }
+.header-right {
+  margin-right: 0.5rem;
+}
 .header-right .btn {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  border: 2.5px outset;
+  border-top-color: white;
+  border-left-color: white;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-right-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-bar {
   display: flex;
-  height: 25px;
+  height: 26px;
   align-items: center;
   padding-left: 1rem;
   position: relative;
@@ -139,8 +158,9 @@ section.side {
 .footer {
   display: flex;
   margin-left: 0.5rem;
-  padding-top: 0.6em;
+  padding: 0.3em 0;
 }
 .footer p {
   opacity: 0.85;
+  margin-top: 0.2rem;
 }
