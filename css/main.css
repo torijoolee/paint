@@ -22,11 +22,16 @@ canvas {
 section {
   display: flex;
 }
+
 .container {
   width: 50vw;
   min-height: 83vh;
-
+  border-radius: 0 0 2px 2px;
   background: #ece9d8;
+}
+
+.header-logo {
+  color: transparent;
 }
 .header-top-wrap {
   display: flex;
@@ -35,6 +40,8 @@ section {
   align-items: center;
   color: white;
   height: 25px;
+  padding-left: 1rem;
+  border-radius: 2px 2px 0 0;
 }
 .header-left {
   display: flex;
@@ -43,7 +50,12 @@ section {
   display: flex;
   height: 25px;
   align-items: center;
+  padding-left: 1rem;
 }
+.nav-bar li {
+  margin-right: 1rem;
+}
+
 section.side {
   position: relative;
   padding: 0 0.4rem;
@@ -66,7 +78,7 @@ section.side {
   background-size: 68%;
   background-color: transparent;
   color: transparent;
-  border: none;
+  /* border: none; */
 }
 .side-icons .icon.icon-large {
   width: 80px;
@@ -106,4 +118,6 @@ section.side {
 }
 .footer {
   display: flex;
+  margin-left: 0.5rem;
+  padding-top: 0.6em;
 }
