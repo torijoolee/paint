@@ -136,8 +136,8 @@ section.side {
   border: 2.8px inset rgb(255, 251, 235, 0.8);
   border-top-color: rgba(0, 0, 0, 0.05);
   border-left-color: rgba(0, 0, 0, 0.05);
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  border-right-color: rgba(0, 0, 0, 0.2);
+  border-bottom-color: rgba(95, 93, 62, 0.5);
+  border-right-color: rgba(95, 93, 62, 0.4);
 }
 
 .side-icons .icon.icon-large {
