@@ -31,7 +31,7 @@
           <li><span>H</span>elp</li>
         </ul>
       </header>
-      <section>
+      <section class="side">
         <aside class="side-icons">
           <button class="icon" style="background-image: url(painticon/01.png)">
             별
@@ -48,7 +48,13 @@
           <button class="icon" style="background-image: url(painticon/05.png)">
             스포이드
           </button>
-          <button class="icon" style="background-image: url(painticon/06.png)">
+          <button
+            class="icon"
+            style="
+              background-image: url(painticon/06.png);
+              background-size: 55%;
+            "
+          >
             돋보기
           </button>
           <button
@@ -72,7 +78,13 @@
           <button class="icon" style="background-image: url(painticon/09.png)">
             스프레이
           </button>
-          <button class="icon" style="background-image: url(painticon/10.png)">
+          <button
+            class="icon"
+            style="
+              background-image: url(painticon/10.png);
+              background-size: 50%;
+            "
+          >
             텍스트
           </button>
           <button
@@ -117,10 +129,48 @@
         <canvas></canvas>
       </section>
       <section class="palette">
+        <div
+          class="change-color"
+          style="background-image: url(paintIcon/20.png)"
+        ></div>
         <div class="colors">
-          <div class="change-color"></div>
+          <div class="color-top-wrap">
+            <div class="color-chip" style="background: #010101"></div>
+            <div class="color-chip" style="background: #686868"></div>
+            <div class="color-chip" style="background: #700005"></div>
+            <div class="color-chip" style="background: #68670b"></div>
+            <div class="color-chip" style="background: #116d00"></div>
+            <div class="color-chip" style="background: #0b6e6b"></div>
+            <div class="color-chip" style="background: #0b026d"></div>
+            <div class="color-chip" style="background: #660265"></div>
+            <div class="color-chip" style="background: #696a2e"></div>
+            <div class="color-chip" style="background: #0e2d2f"></div>
+            <div class="color-chip" style="background: #1768f8"></div>
+            <div class="color-chip" style="background: #0c2b62"></div>
+            <div class="color-chip" style="background: #3204fc"></div>
+            <div class="color-chip" style="background: #6e2804"></div>
+          </div>
+          <div class="color-btm-wrap">
+            <div class="color-chip" style="background: #ffffff"></div>
+            <div class="color-chip" style="background: #afafaf"></div>
+            <div class="color-chip" style="background: #f70305"></div>
+            <div class="color-chip" style="background: #fbfe00"></div>
+            <div class="color-chip" style="background: #29fe03"></div>
+            <div class="color-chip" style="background: #32feff"></div>
+            <div class="color-chip" style="background: #1a00ff"></div>
+            <div class="color-chip" style="background: #fe00ff"></div>
+            <div class="color-chip" style="background: #ffff5f"></div>
+            <div class="color-chip" style="background: #2cfd59"></div>
+            <div class="color-chip" style="background: #6fffff"></div>
+            <div class="color-chip" style="background: #6763ff"></div>
+            <div class="color-chip" style="background: #f6036d"></div>
+            <div class="color-chip" style="background: #f7652c"></div>
+          </div>
         </div>
       </section>
+      <footer class="footer">
+        <p>도움말이 필요하면 도움말 메뉴의 도움말 항목을 클릭하세요</p>
+      </footer>
     </div>
   </body>
 </html>

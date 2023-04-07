@@ -16,7 +16,7 @@ body {
 canvas {
   width: 100%;
   overflow-x: hidden;
-  height: 62vh;
+  min-height: 62vh;
   background-color: #fff;
 }
 section {
@@ -24,7 +24,7 @@ section {
 }
 .container {
   width: 50vw;
-  height: 85vh;
+  min-height: 83vh;
 
   background: #ece9d8;
 }
@@ -44,7 +44,7 @@ section {
   height: 25px;
   align-items: center;
 }
-section {
+section.side {
   position: relative;
   padding: 0 0.4rem;
 }
@@ -63,7 +63,7 @@ section {
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 70%;
+  background-size: 68%;
   background-color: transparent;
   color: transparent;
   border: none;
@@ -72,6 +72,38 @@ section {
   width: 80px;
   height: 50px;
   background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.palette .colors {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
 }
 .palette {
+  margin-top: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid white;
+}
+.color-chip {
+  width: 22px;
+  height: 22px;
+  margin: 0 0.1rem;
+}
+.color-top-wrap,
+.color-btm-wrap {
+  display: flex;
+}
+.change-color {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  margin: 0 0.1rem;
+  margin-left: 0.3rem;
+}
+.footer {
+  display: flex;
 }
