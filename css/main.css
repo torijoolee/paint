@@ -1,10 +1,31 @@
+:root {
+  /* color */
+}
+
 html {
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+canvas {
+  width: 100%;
+  overflow-x: hidden;
+  height: 62vh;
+  background-color: #fff;
+}
+section {
+  display: flex;
+}
 .container {
-  width: 45vw;
-  height: 80vh;
+  width: 50vw;
+  height: 85vh;
+
   background: #ece9d8;
 }
 .header-top-wrap {
@@ -21,16 +42,20 @@ html {
 .nav-bar {
   display: flex;
   height: 25px;
-  background-color: #fff;
   align-items: center;
 }
 section {
   position: relative;
+  padding: 0 0.4rem;
 }
 .side-icons {
   width: 80px;
+  height: 100%;
   display: flex;
+  justify-content: start;
   flex-wrap: wrap;
+  background: #ece9d8;
+  padding-right: 0.4rem;
 }
 .side-icons .icon {
   width: 40px;
@@ -41,4 +66,12 @@ section {
   background-size: 70%;
   background-color: transparent;
   color: transparent;
+  border: none;
+}
+.side-icons .icon.icon-large {
+  width: 80px;
+  height: 50px;
+  background-size: 70%;
+}
+.palette {
 }
