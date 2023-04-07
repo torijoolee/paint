@@ -74,6 +74,7 @@ section {
   border-bottom-color: rgba(0, 0, 0, 0.2);
   border-right-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
 }
 .header-right .btn:nth-child(2) {
   font-size: 1rem;
@@ -126,9 +127,17 @@ section.side {
   background-color: transparent;
   color: transparent;
   border: 2.8px outset hsl(50, 61%, 92%, 0.5);
-  border-top-color: hsl(0, 0%, 100%, 0.5);
+  border-top-color: hsl(0, 0%, 100%, 0.6);
   border-left-color: hsl(0, 0%, 100%, 0.65);
   border-bottom-color: hsl(50, 61%, 92%, 0.85);
+  cursor: pointer;
+}
+.side-icons .icon:hover {
+  border: 2.8px inset rgb(255, 251, 235, 0.8);
+  border-top-color: rgba(0, 0, 0, 0.05);
+  border-left-color: rgba(0, 0, 0, 0.05);
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-right-color: rgba(0, 0, 0, 0.2);
 }
 
 .side-icons .icon.icon-large {
@@ -156,6 +165,7 @@ section.side {
   height: 21px;
   border: inset;
   margin-right: 0.1rem;
+  cursor: pointer;
 }
 .colors {
   display: flex;
@@ -173,6 +183,7 @@ section.side {
 }
 .change-color {
   border: inset;
+  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
   height: 50px;
