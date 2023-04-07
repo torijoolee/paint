@@ -58,15 +58,23 @@ section {
 }
 .header-right {
   margin-right: 0.5rem;
+  display: flex;
 }
 .header-right .btn {
   width: 20px;
   height: 20px;
   border: 2.5px outset;
+  display: flex;
+  margin-left: 0.3rem;
+  align-items: center;
+  justify-content: center;
   border-top-color: white;
   border-left-color: white;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   border-right-color: rgba(0, 0, 0, 0.1);
+}
+.header-right .btn:nth-child(2) {
+  font-size: 1rem;
 }
 
 .nav-bar {
@@ -123,7 +131,8 @@ section.side {
 }
 .palette {
   margin-top: 1rem;
-  border-bottom: 1px solid white;
+  border-bottom: 5px ridge;
+  border-bottom-color: hsl(50, 61%, 92%, 0.3);
 }
 .color-chip {
   width: 21px;
