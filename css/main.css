@@ -7,12 +7,11 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 canvas {
-  width: 100%;
-  overflow-x: hidden;
-  min-height: 62vh;
+  width: 610px;
+  height: 460px;
   background-color: #fff;
   border: 4px inset;
   border-left-color: hsl(50, 61%, 92%, 0.5);
