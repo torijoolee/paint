@@ -10,9 +10,9 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 canvas {
-  width: 610px;
+  width: 690px;
   min-width: 300px;
-  height: 460px;
+  height: 560px;
   background-color: #fff;
   border: 4px inset;
   border-left-color: hsl(50, 61%, 92%, 0.5);
@@ -145,7 +145,7 @@ section.side {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34.9px;
+  width: 34px;
   height: 35px;
 }
 
@@ -192,6 +192,7 @@ section.side {
 }
 .colors {
   display: flex;
+  flex-direction: column;
 }
 .color-top-wrap,
 .color-btm-wrap {
