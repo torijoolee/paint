@@ -171,6 +171,7 @@ section.side {
   border: 1px solid #fff;
   accent-color: #0555e5;
 }
+
 .palette .colors {
   display: flex;
   flex-wrap: wrap;
