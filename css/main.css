@@ -162,11 +162,16 @@ section.side {
   background-position: center;
 }
 
+.rangeInput {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: 1px solid #fff;
+  accent-color: #0555e5;
+}
 .palette .colors {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-
   width: fit-content;
 }
 .palette {
