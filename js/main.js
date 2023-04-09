@@ -5,13 +5,22 @@ const paint = document.querySelector(".paint");
 const deletePage = document.querySelector(".del");
 const colorChips = document.querySelectorAll(".color-chip");
 const inputRange = document.querySelector(".rangeInput");
+const boxElem = document.querySelector(".box");
+const brush = document.querySelector(".brush");
 canvas.width = 610;
 canvas.height = 460;
+ctx.lineCap = "round";
 
 let isPainting = false;
 let isFillMode = false;
-ctx.lineCap = "round";
+let boxDrawMode = false;
 
+let rectX = 0;
+let rectY = 0;
+let canvasX = canvas.width;
+let canvasY = canvas.height;
+
+//color
 colorChips.forEach((color) => {
   color.addEventListener("click", function (event) {
     console.log(event.target.dataset.color);
@@ -21,19 +30,34 @@ colorChips.forEach((color) => {
   });
 });
 
+function mouseDown(event) {
+  isPainting = true;
+  rectX = event.offsetX;
+  rectY = event.offsetY;
+}
+
 //drawing
 function onMoveMouse(event) {
   if (isPainting) {
     ctx.lineTo(event.offsetX, event.offsetY);
     ctx.stroke();
-    return;
+  }
+  if (isPainting && boxDrawMode) {
+    const x = event.offsetX;
+    const y = event.offsetY;
+    const width = x - rectX;
+    const height = y - rectY;
+    ctx.moveTo(x, y);
+    ctx.fillRect(rectX, rectY, width, height);
   }
   ctx.moveTo(event.offsetX, event.offsetY);
 }
 
-function mouseDown() {
-  isPainting = true;
+function brushTool() {
+  boxDrawMode = false;
+  isPainting = false;
 }
+
 function mouseUp() {
   isPainting = false;
   ctx.beginPath();
@@ -63,10 +87,18 @@ function deleteAllPage() {
   ctx.fillRect(0, 0, 610, 460);
 }
 
+//lineWidth
 function checkLineWidth(event) {
   ctx.lineWidth = event.target.value;
 }
+// box
+function boxMode() {
+  boxDrawMode = true;
+  canvas.style.cursor = "crosshair";
+}
 
+brush.addEventListener("click", brushTool);
+boxElem.addEventListener("click", boxMode);
 inputRange.addEventListener("change", checkLineWidth);
 deletePage.addEventListener("click", deleteAllPage);
 canvas.addEventListener("click", fillPage);
