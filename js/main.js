@@ -7,24 +7,21 @@ const colorChips = document.querySelectorAll(".color-chip");
 const inputRange = document.querySelector(".rangeInput");
 const boxElem = document.querySelector(".box");
 const brush = document.querySelector(".brush");
+const imageFile = document.getElementById("save");
 canvas.width = 610;
 canvas.height = 460;
-ctx.lineCap = "round";
 
 let isPainting = false;
 let isFillMode = false;
-let boxDrawMode = false;
 
-let rectX = 0;
-let rectY = 0;
-let canvasX = canvas.width;
-let canvasY = canvas.height;
+let colorPick = "black";
+ctx.lineCap = "round";
+ctx.lineWidth = inputRange.value;
 
 //color
 colorChips.forEach((color) => {
   color.addEventListener("click", function (event) {
-    console.log(event.target.dataset.color);
-    const colorPick = event.target.dataset.color;
+    colorPick = event.target.dataset.color;
     ctx.fillStyle = colorPick;
     ctx.strokeStyle = colorPick;
   });
@@ -32,8 +29,7 @@ colorChips.forEach((color) => {
 
 function mouseDown(event) {
   isPainting = true;
-  rectX = event.offsetX;
-  rectY = event.offsetY;
+  ctx.fillStyle = colorPick;
 }
 
 //drawing
@@ -42,27 +38,20 @@ function onMoveMouse(event) {
     ctx.lineTo(event.offsetX, event.offsetY);
     ctx.stroke();
   }
-  if (isPainting && boxDrawMode) {
-    const x = event.offsetX;
-    const y = event.offsetY;
-    const width = x - rectX;
-    const height = y - rectY;
-    ctx.moveTo(x, y);
-    ctx.fillRect(rectX, rectY, width, height);
-  }
-  ctx.moveTo(event.offsetX, event.offsetY);
-}
 
-function brushTool() {
-  boxDrawMode = false;
-  isPainting = false;
+  ctx.moveTo(event.offsetX, event.offsetY);
 }
 
 function mouseUp() {
   isPainting = false;
   ctx.beginPath();
 }
-
+//brush
+function brushTool() {
+  ctx.strokeStyle = colorPick;
+  boxDrawMode = false;
+  ctx.beginPath();
+}
 //paint
 function handleFillMode() {
   if (isFillMode) {
@@ -71,6 +60,7 @@ function handleFillMode() {
     isFillMode = true;
   }
 }
+
 function fillPage() {
   if (isFillMode) {
     ctx.fillRect(0, 0, 610, 460);
@@ -80,25 +70,40 @@ function fillPage() {
 function eraserBtn() {
   ctx.strokeStyle = "white";
   isFillMode = false;
+  boxDrawMode = false;
 }
 //deletePage
 function deleteAllPage() {
   ctx.fillStyle = "white";
-  ctx.fillRect(0, 0, 610, 460);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  isFillMode = false;
+  boxDrawMode = false;
 }
 
 //lineWidth
 function checkLineWidth(event) {
   ctx.lineWidth = event.target.value;
 }
-// box
-function boxMode() {
-  boxDrawMode = true;
-  canvas.style.cursor = "crosshair";
+//add file
+function onFileChange(event) {
+  const file = event.target.files[0];
+  const url = URL.createObjectURL(file);
+  const image = new Image();
+  image.src = url;
+  image.onload = function () {
+    ctx.drawImage(
+      image,
+      canvas.width * 0.1,
+      canvas.height * 0.1,
+      canvas.width * 0.8,
+      canvas.height * 0.8
+    );
+    imageFile.value = null;
+  };
 }
 
+imageFile.addEventListener("change", onFileChange);
 brush.addEventListener("click", brushTool);
-boxElem.addEventListener("click", boxMode);
 inputRange.addEventListener("change", checkLineWidth);
 deletePage.addEventListener("click", deleteAllPage);
 canvas.addEventListener("click", fillPage);

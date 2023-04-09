@@ -145,7 +145,10 @@ section.side {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 34.9px;
+  height: 35px;
 }
+
 .side-icons .icon:hover {
   border: 2.8px inset rgb(255, 251, 235, 0.8);
   border-top-color: rgba(0, 0, 0, 0.05);
@@ -172,6 +175,7 @@ section.side {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
+
   width: fit-content;
 }
 .palette {
@@ -210,6 +214,12 @@ section.side {
   background-size: cover;
   background-color: #fff;
   margin-left: 0.3rem;
+}
+input#save {
+  all: unset;
+  width: 1px;
+  height: 1px;
+  display: none;
 }
 .footer {
   display: flex;

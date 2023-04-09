@@ -34,7 +34,9 @@
       <section class="side">
         <aside class="side-icons">
           <button class="icon del">␡</button>
-          <button class="icon save">🖼</button>
+          <label for="save" class="icon save">🖼</label
+          ><input type="file" accept="img/*" id="save" multiple />
+
           <button
             class="icon eraser"
             style="background-image: url(painticon/03.png)"
@@ -142,7 +144,7 @@
             max="50"
             min="0"
             step="1"
-            value="10"
+            value="5"
           />
         </aside>
         <canvas></canvas>
