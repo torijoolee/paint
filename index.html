@@ -33,12 +33,8 @@
       </header>
       <section class="side">
         <aside class="side-icons">
-          <button class="icon" style="background-image: url(painticon/01.png)">
-            별
-          </button>
-          <button class="icon" style="background-image: url(painticon/01.png)">
-            네모
-          </button>
+          <button class="icon del">␡</button>
+          <button class="icon save">🖼</button>
           <button
             class="icon eraser"
             style="background-image: url(painticon/03.png)"
@@ -97,10 +93,10 @@
             텍스트
           </button>
           <button
-            class="icon"
+            class="icon line"
             style="
               background-image: url(painticon/11.png);
-              background-size: 60%;
+              background-size: 56%;
             "
           >
             직선
@@ -109,13 +105,13 @@
             class="icon"
             style="
               background-image: url(painticon/12.png);
-              background-size: 30%;
+              background-size: 26%;
             "
           >
             곡선
           </button>
           <button
-            class="icon"
+            class="icon box"
             style="
               background-image: url(painticon/13.png);
               background-size: 65%;
@@ -156,36 +152,148 @@
         ></div>
         <div class="colors">
           <div class="color-top-wrap">
-            <div class="color-chip" style="background: #010101"></div>
-            <div class="color-chip" style="background: #686868"></div>
-            <div class="color-chip" style="background: #700005"></div>
-            <div class="color-chip" style="background: #68670b"></div>
-            <div class="color-chip" style="background: #116d00"></div>
-            <div class="color-chip" style="background: #0b6e6b"></div>
-            <div class="color-chip" style="background: #0b026d"></div>
-            <div class="color-chip" style="background: #660265"></div>
-            <div class="color-chip" style="background: #696a2e"></div>
-            <div class="color-chip" style="background: #0e2d2f"></div>
-            <div class="color-chip" style="background: #1768f8"></div>
-            <div class="color-chip" style="background: #0c2b62"></div>
-            <div class="color-chip" style="background: #3204fc"></div>
-            <div class="color-chip" style="background: #6e2804"></div>
+            <div
+              class="color-chip"
+              style="background: #010101"
+              data-color="#010101"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #686868"
+              data-color="#686868"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #700005"
+              data-color="#700005"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #68670b"
+              data-color="#68670b"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #116d00"
+              data-color="#116d00"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #0b6e6b"
+              data-color="#0b6e6b"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #0b026d"
+              data-color="#0b026d"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #660265"
+              data-color="#660265"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #696a2e"
+              data-color="#696a2e"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #0e2d2f"
+              data-color="#0e2d2f"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #1768f8"
+              data-color="#1768f8"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #0c2b62"
+              data-color="#0c2b62"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #3204fc"
+              data-color="#3204fc"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #6e2804"
+              data-color="#6e2804"
+            ></div>
           </div>
           <div class="color-btm-wrap">
-            <div class="color-chip" style="background: #ffffff"></div>
-            <div class="color-chip" style="background: #afafaf"></div>
-            <div class="color-chip" style="background: #f70305"></div>
-            <div class="color-chip" style="background: #fbfe00"></div>
-            <div class="color-chip" style="background: #29fe03"></div>
-            <div class="color-chip" style="background: #32feff"></div>
-            <div class="color-chip" style="background: #1a00ff"></div>
-            <div class="color-chip" style="background: #fe00ff"></div>
-            <div class="color-chip" style="background: #ffff5f"></div>
-            <div class="color-chip" style="background: #2cfd59"></div>
-            <div class="color-chip" style="background: #6fffff"></div>
-            <div class="color-chip" style="background: #6763ff"></div>
-            <div class="color-chip" style="background: #f6036d"></div>
-            <div class="color-chip" style="background: #f7652c"></div>
+            <div
+              class="color-chip"
+              style="background: #ffffff"
+              data-color="#ffffff"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #afafaf"
+              data-color="#afafaf"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #f70305"
+              data-color="#f70305"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #fbfe00"
+              data-color="#fbfe00"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #29fe03"
+              data-color="#29fe03"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #32feff"
+              data-color="#32feff"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #1a00ff"
+              data-color="#1a00ff"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #fe00ff"
+              data-color="#fe00ff"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #ffff5f"
+              data-color="#ffff5f"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #2cfd59"
+              data-color="#2cfd59"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #6fffff"
+              data-color="#6fffff"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #6763ff"
+              data-color="#6763ff"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #f6036d"
+              data-color="#f6036d"
+            ></div>
+            <div
+              class="color-chip"
+              style="background: #f7652c"
+              data-color="#f7652c"
+            ></div>
           </div>
         </div>
       </section>
