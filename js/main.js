@@ -8,7 +8,7 @@ const inputRange = document.querySelector(".rangeInput");
 const boxElem = document.querySelector(".box");
 const brush = document.querySelector(".brush");
 const imageFile = document.getElementById("save");
-canvas.width = 690;
+canvas.width = 610;
 canvas.height = 460;
 
 let isPainting = false;
